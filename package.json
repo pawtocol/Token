@@ -1,8 +1,7 @@
 {
-  "name": "upiToken",
+  "name": "UPIToken",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Pawtocol Network UPI Token",
   "scripts": {
     "test": "./node_modules/.bin/truffle test"
   },
@@ -14,9 +13,7 @@
     "babel-polyfill": "^6.26.0",
     "ganache-cli": "^6.7.0",
     "truffle": "^5.0.41",
-    "web3": "^1.2.4"
-  },
-  "devDependencies": {
+    "web3": "^1.2.4",
     "solidity-coverage": "^0.6.7",
     "token-test-suite": "^0.1.1"
   }
