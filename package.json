@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/truffle test"
   },
   "author": "",
   "dependencies": {
@@ -17,6 +17,7 @@
     "web3": "^1.2.4"
   },
   "devDependencies": {
+    "solidity-coverage": "^0.6.7",
     "token-test-suite": "^0.1.1"
   }
 }
