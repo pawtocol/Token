@@ -694,4 +694,8 @@ contract UPIToken is ERC20, ERC20Detailed, ERC20Mintable, ERC20Burnable {
         renounceMinter();
     }
 
+    function () external {
+        revert("Invalid request.");
+    }
+
 }
