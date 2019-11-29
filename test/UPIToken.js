@@ -1,3 +1,6 @@
+require("babel-core/register");
+require("babel-polyfill");
+
 const suite = require('../node_modules/token-test-suite/lib/suite');
 const MyToken = artifacts.require('UPIToken');
 const { toBN, toWei } = web3.utils;

@@ -5,19 +5,15 @@ import "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20Mintable.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol";
 
-contract UPIToken is ERC20, ERC20Detailed, ERC20Mintable, ERC20Burnable {
+contract UPIToken is ERC20Detailed,  ERC20Burnable {
   
-    string private _name = "Pawtocol Network UPI Token";
-    string private _symbol = "UPI";
-    uint8 private _decimals = 18;
-    uint256 private INITIAL_SUPPLY = uint(1000000000) * (uint256(10) ** _decimals);
+    uint256 constant private _INITIAL_SUPPLY = 1000000000 ether;
     
     constructor() 
-    	ERC20Detailed(_name, _symbol, _decimals) 
+    	ERC20Detailed("Pawtocol Network UPI Token", "UPI", 18) 
     	public
     {
-    	mint(msg.sender, INITIAL_SUPPLY);
-        renounceMinter();
+    	_mint(msg.sender, _INITIAL_SUPPLY);
     }
 
     function () external {
