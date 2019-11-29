@@ -13,9 +13,5 @@ contract UPIToken is ERC20Detailed,  ERC20Burnable {
     {
     	_mint(msg.sender, _INITIAL_SUPPLY);
     }
-
-    function () external {
-        revert("Invalid request.");
-    }
     
 }
